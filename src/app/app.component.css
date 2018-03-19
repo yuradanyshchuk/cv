@@ -1,0 +1,35 @@
+.wrapper {
+  background: #fff;
+  font-family: Calibri, serif;
+}
+.header {
+  margin: 10px 0;
+}
+.header-nav a {
+  color: #4193cf;
+}
+.header-nav .active {
+  font-weight: bold;
+}
+.header-nav a:hover {
+  font-weight: bold;
+}
+.profile {
+  margin-bottom: 20px;
+}
+.profile {
+  padding: 50px;
+  background: #4193cf;
+  color: #fff;
+}
+.profile-img {
+  text-align: center;
+}
+.profile-img img{
+  border: 3px solid #f9f9f9;
+  border-radius: 100px;
+  width: 200px;
+}
+.profile-info {
+  margin-top: 20px;
+}

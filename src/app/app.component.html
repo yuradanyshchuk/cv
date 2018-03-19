@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="container">
+    <header class="row header">
+      <ul class="nav header-nav">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link"  routerLink="/">About</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/contacts">Contacts</a>
+        </li>
+      </ul>
+    </header>
+    <section class="row profile">
+      <div class="col-md-6 col-sm-12 profile-title">
+        <h1>{{profile.name}} {{profile.surname}}</h1>
+        <h2>Student of IT Academy, SoftServe, Ivano-Frankivsk</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam deleniti dicta illo in itaque
+          iusto neque numquam pariatur quam quas quia recusandae!</p>
+      </div>
+      <div class="col-md-6 col-sm-12 profile-img">
+        <img src="../assets/image/yd.png" alt="{{profile.name}} {{profile.surname}}">
+      </div>
+      <div class="col-12 row profile-info justify-content-around">
+        <span>{{profile.phone}}</span>
+        <span>{{profile.email}}</span>
+        <span>{{profile.city}}</span>
+        <span>{{profile.site}}</span>
+      </div>
+    </section>
+      <router-outlet></router-outlet>
+  </div>
+</div>
