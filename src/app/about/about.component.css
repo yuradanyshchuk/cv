@@ -4,8 +4,10 @@
 .content h3 {
   color: #4193cf;
 }
-.content-experience {
-  border-right: 1px solid #4193cf;
+@media (min-width: 768px) {
+  .content-experience {
+    border-right: 1px solid #4193cf;
+  }
 }
 .content-time {
   color: #828282;

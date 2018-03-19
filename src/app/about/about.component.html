@@ -1,51 +1,16 @@
 <main class="content row">
   <div class="col-md-9 col-sm-12 content-experience">
     <h3>Experience</h3>
-    <div class="row">
+    <div class="row" *ngFor="let job of experiences">
       <div class="col-md-3 content-time">
-        <span>Mar 2018 - Present</span>
+        <span>{{job.date}}</span>
       </div>
       <div class="col-md-9">
-        <b>Student of IT Academy</b><br>
-        <i>SoftServe, Ivano-Frankivsk</i><br>
+        <b>{{job.position}}</b><br>
+        <i>{{job.name}}, {{job.city}}</i><br>
         <span>Responsibilities:</span>
         <ul class="list">
-          <li>Studying at the IT Academy (Web-UI Development)</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 content-time">
-        <span>Sep 2014 - Mar 2018</span>
-      </div>
-      <div class="col-md-9">
-        <b>Specialist of IT</b><br>
-        <i>LTD "NTMA", Ivano-Frankivsk</i><br>
-        <span>Responsibilities:</span>
-        <ul class="list">
-          <li>Production, modification, and maintenance of websites (HTML5, CSS3, JavaScript, PHP)</li>
-          <li>Fixing any bugs and website errors</li>
-          <li>Implementing responsive design</li>
-          <li>Setting advertising in Google AdWords.</li>
-          <li>Development brochures and banners (Adobe Photoshop)</li>
-          <li>Design photos for site content (Adobe Photoshop)</li>
-          <li>Building a Windows Embedded Standard 7 Image (ICE, IBW)</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 content-time">
-        <span>Jul 2014 - Aug 2014</span>
-      </div>
-      <div class="col-md-9">
-        <b>Summer Practice</b><br>
-        <i>OSF GLOBAL SERVICES, Ivano-Frankivsk</i><br>
-        <span>Responsibilities:</span>
-        <ul class="list">
-          <li>Learning and improving HTML5, CSS3 skills</li>
-          <li>Learning and testing new technologies</li>
-          <li>Implementing responsive design</li>
-          <li> Web development</li>
+          <li *ngFor="let task of job.responsibilities">{{task}}</li>
         </ul>
       </div>
     </div>
@@ -54,29 +19,9 @@
     <section class="content-skill">
       <h3>Skills</h3>
       <ul>
-        <li><b>Web Development</b>
+        <li *ngFor="let item of skills"><b>{{item.name}}</b>
           <ul class="list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>LESS</li>
-            <li>Bootstrap</li>
-          </ul>
-        </li>
-        <li><b>CMS</b>
-          <ul class="list">
-            <li>Joomla</li>
-          </ul>
-        </li>
-        <li><b>Database</b>
-          <ul class="list">
-            <li>MySQL</li>
-          </ul>
-        </li>
-        <li><b>Tools</b>
-          <ul class="list">
-            <li>Adobe Photoshop</li>
-            <li>Sublime Text 3</li>
+            <li *ngFor="let technology of item.technology">{{technology}}</li>
           </ul>
         </li>
       </ul>
@@ -84,8 +29,7 @@
     <section class="content-languages">
       <h3>Languages</h3>
       <ul>
-        <li><b>Ukraine:</b> native</li>
-        <li><b>English:</b> Intermidiate low</li>
+        <li *ngFor="let language of languages"><b>{{language.name}}:</b> {{language.level}}</li>
       </ul>
     </section>
   </div>

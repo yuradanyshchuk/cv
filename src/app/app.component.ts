@@ -13,7 +13,7 @@ export class AppComponent {
     phone: '+380976123968',
     email: 'yuradanyshchuk@gmail.com',
     city: 'Ivano-Frankivsk',
-    site: '-'
+    descr: 'I am studying!'
   };
 }
 
